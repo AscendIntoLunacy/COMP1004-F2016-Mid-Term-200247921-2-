@@ -40,8 +40,7 @@
             // 
             // SplashForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImage = global::COMP1004_F2016_Mid_Term_200247921.Properties.Resources.splashSceen;
             this.ClientSize = new System.Drawing.Size(600, 320);
             this.ControlBox = false;

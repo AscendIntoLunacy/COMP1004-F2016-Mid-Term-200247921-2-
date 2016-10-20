@@ -28,8 +28,13 @@ namespace COMP1004_F2016_Mid_Term_200247921
 
         }
 
+
+        // Generates random names from two list boxes, and submits to character class.
         private void GenerateNames()
         {
+            // Generates a random number and sifts through list box.
+            // Uses the selected string and prints to text box.
+            // Saves Textbox to character class
             int rnd = _random.Next(1, FirstNameListBox.Items.Count);
             FirstNameListBox.Select();
             FirstNameListBox.SelectedItem = FirstNameListBox.Items[rnd];
@@ -43,12 +48,14 @@ namespace COMP1004_F2016_Mid_Term_200247921
             Program.character.LastName = LastNameTextBox.Text;
         }
 
+        // Runs the GenerateNames method when form loads
         private void GenerateNameForm_Load(object sender, EventArgs e)
         {
             this._random = new Random();
             GenerateNames();
         }
 
+        // Runs Generate Names method when button is clicked
         private void GenerateButton_Click(object sender, EventArgs e)
         {
             GenerateNames();
@@ -56,7 +63,12 @@ namespace COMP1004_F2016_Mid_Term_200247921
 
         private void NextButton_Click(object sender, EventArgs e)
         {
+            // Hides form
+            this.Hide();
+            // Starts new form
             AbilityGeneratorForm abilityGenForm = new AbilityGeneratorForm();
+            abilityGenForm.previousNameForm = this;
+            abilityGenForm.Show();
         }
     }
 }

@@ -49,10 +49,13 @@ namespace COMP1004_F2016_Mid_Term_200247921
             RadioButton selectedRace = (RadioButton)sender;
 
             this._selectedRace = selectedRace.Text;
+
+            Program.character.Race = selectedRace.Text;
         }
 
         private void NextButton_Click(object sender, EventArgs e)
         {
+
             FinalForm finalForm = new FinalForm();
             finalForm.previousForm = this;
 
