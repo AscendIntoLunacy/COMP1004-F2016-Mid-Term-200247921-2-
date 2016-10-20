@@ -26,6 +26,7 @@ namespace COMP1004_F2016_Mid_Term_200247921
         // private Instance Object
         private Random _random;
 
+        public GenerateNameForm previousNameForm;
 
 
         public AbilityGeneratorForm()
