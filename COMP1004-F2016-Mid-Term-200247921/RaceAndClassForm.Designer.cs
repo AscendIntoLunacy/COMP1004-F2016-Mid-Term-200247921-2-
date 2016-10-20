@@ -35,7 +35,9 @@
             this.ElfRadioButton = new System.Windows.Forms.RadioButton();
             this.HumanRadioButton = new System.Windows.Forms.RadioButton();
             this.NextButton = new System.Windows.Forms.Button();
+            this.RacePictureBox = new System.Windows.Forms.PictureBox();
             this.RaceGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RacePictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // BackButton
@@ -128,12 +130,22 @@
             this.NextButton.UseVisualStyleBackColor = true;
             this.NextButton.Click += new System.EventHandler(this.NextButton_Click);
             // 
+            // RacePictureBox
+            // 
+            this.RacePictureBox.Location = new System.Drawing.Point(631, 62);
+            this.RacePictureBox.Name = "RacePictureBox";
+            this.RacePictureBox.Size = new System.Drawing.Size(645, 639);
+            this.RacePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.RacePictureBox.TabIndex = 6;
+            this.RacePictureBox.TabStop = false;
+            // 
             // RaceAndClassForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1344, 1046);
             this.ControlBox = false;
+            this.Controls.Add(this.RacePictureBox);
             this.Controls.Add(this.NextButton);
             this.Controls.Add(this.RaceGroupBox);
             this.Controls.Add(this.BackButton);
@@ -144,6 +156,7 @@
             this.Text = "Race And Class Selection";
             this.RaceGroupBox.ResumeLayout(false);
             this.RaceGroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RacePictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -157,5 +170,6 @@
         private System.Windows.Forms.RadioButton ElfRadioButton;
         private System.Windows.Forms.RadioButton HumanRadioButton;
         protected System.Windows.Forms.Button NextButton;
+        private System.Windows.Forms.PictureBox RacePictureBox;
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using COMP1004_F2016_Mid_Term_200247921.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -6,6 +7,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -51,6 +53,11 @@ namespace COMP1004_F2016_Mid_Term_200247921
             this._selectedRace = selectedRace.Text;
 
             Program.character.Race = selectedRace.Text;
+
+            string imageString = Regex.Replace(selectedRace.Text, @"\s+", "");
+            RacePictureBox.Image = (Image)Resources.ResourceManager.GetObject(imageString);
+
+            Program.character.RacePicture = RacePictureBox.Image;
         }
 
         private void NextButton_Click(object sender, EventArgs e)

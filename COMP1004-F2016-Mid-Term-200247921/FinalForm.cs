@@ -62,6 +62,8 @@ namespace COMP1004_F2016_Mid_Term_200247921
             IntelligenceTextBox.Text = Program.character.Intelligence.ToString();
             WisdomTextBox.Text = Program.character.Wisdom.ToString();
             CharismaTextBox.Text = Program.character.Charisma.ToString();
+
+            FinalRacePictureBox.Image = Program.character.RacePicture;
         }
     }
 }

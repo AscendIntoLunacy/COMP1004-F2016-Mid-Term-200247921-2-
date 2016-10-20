@@ -24,5 +24,7 @@ namespace COMP1004_F2016_Mid_Term_200247921
         public string FirstName { get; set; }
 
         public string LastName { get; set; }
+
+        public System.Drawing.Image RacePicture { get; set;}
     }
 }
